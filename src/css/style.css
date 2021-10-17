@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Marvin;
+  src: url('../assets/fonts/Marvin.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+div, p, span, h1, h2, h3, h4, img {
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+}
+html, body { height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #DCF6FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body::before {
+  content: '';
+  background: url('../assets/images/bg.jpg') center no-repeat;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+#root {
+  position: absolute;
+}
+
+/* проверка рекламы */
+#adblock {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.adBanner {
+  height: 2px;
+  width: 2px;
+  visibility: hidden;
+}
+
+#record {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: 52.5%;
+  bottom: 42.5%;
+  width: 42%;
+  left: 29%;
+  z-index: 10;
+  border: none;
+  padding-left: 8px;
+  font-family: 'Marvin';
+  font-size: 120%;
+  color: '#974f00';
+}
